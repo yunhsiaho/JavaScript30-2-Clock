@@ -24,9 +24,22 @@ function setDate (){
     const hourDegrees = ((hour/60)*360);
     hourHand.style.transform = `rotate(${hourDegrees+90}deg)`
 
-    digitalSecond.innerHTML = second;
-    digitalMinute.innerHTML = minute;
-    digitalHour.innerHTML = hour;
+    if(second<10){
+        digitalSecond.innerHTML = `0${second}`;
+    }else{
+        digitalSecond.innerHTML = second;
+    }
+    if(minute<10){
+        digitalMinute.innerHTML = `0${minute}`;
+    }else{
+        digitalMinute.innerHTML = minute;
+    }
+    if(hour<10){
+        digitalHour.innerHTML = `0${hour}`;
+    }else{
+        digitalHour.innerHTML = hour;
+    }
+
 }
 
 setInterval(setDate,1000); /*active setDate function every second*/

@@ -1,0 +1,81 @@
+/* the star sign selector "*" will select ALL the elements,
+so be carefull when using it, especially when there's background-image
+*/
+
+html{
+    background: url(background.jpg);
+    background-size: cover;
+    /* font-family: ; */
+    /* text-align: center; */
+    font-size: 10px;
+}
+body{
+    /* font-size: 2rem; */
+    display:flex;  /* to let the clock stay center*/
+    flex:1;
+    min-height: 100vh;/* to let the clock stay center*/
+    align-items: center;
+}
+.clock{
+    width:30rem;
+    height: 30rem;
+    border:20px solid white;
+    border-radius: 50%;
+    margin: auto;
+    position:relative;
+    padding:2rem; /*let the clock hand relatively shorter*/
+    box-shadow: 
+    0 0 0px 4px rgba(0, 0, 0, 0.1), /*the outest shadow ring of the clock ring*/
+    inset 0 0 0 5px white,/*the light thin white ring INSIDE, first layer shadow*/
+    inset 0 0 100px black,/*the black shadow INSIDE, second layer shadow*/
+    0 0 10px rgb(80, 2, 2, 1);
+}
+
+.clock-face{
+    /* border: red solid 10px; */
+    position:relative;
+    width:100%;
+    height:100%;
+    /* transform:translateY(-3px);  */
+}
+
+.hand{
+    width:50%;/*in affect it's the length of the hand, 50% of clock face*/
+    background:black ;
+    position:absolute;
+    top:50%;
+    transform-origin: 100%; /*turn from the middle*/
+    transform:rotate(90deg); /* let it starts from 12 o'clock  */
+    transition:all 0.05s;
+    transition-timing-function:cubic-bezier(0.74,-2.04, 0.15, 2.8);
+/* ease-in = 
+    ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default) 
+    linear - specifies a transition effect with the same speed from start to end. 
+    ease-in - specifies a transition effect with a slow start. 
+    ease-out - specifies a transition effect with a slow end. */
+}
+
+/*transform-origin
+ https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin */
+
+.second{
+    background-color: coral;
+    height:4px;/*in affect it's the width of the hand*/
+
+}
+
+ .minute{
+     background-color:royalblue;
+     height:6px;/*in affect it's the width of the hand*/
+
+ }
+
+ .hour{
+    height:8px;/*in affect it's the width of the hand*/
+
+ }
+
+ .digital-clock{
+     color:white;
+     font-size: 3rem;
+ }

@@ -3,6 +3,7 @@ so be carefull when using it, especially when there's background-image
 */
 
 html{
+    
     background: url(background.jpg);
     background-size: cover;
     /* font-family: ; */

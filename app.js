@@ -14,7 +14,9 @@ function setDate (){
     console.log(second);
     secondHand.style.transform = `rotate(${secondDegrees+90}deg)`
     tickSound.currentTime = 0;
-    tickSound.play();
+    tickSound.play();   
+    document.querySelector('.digital-clock').classList.add('playing');
+
 
     const minute = now.getMinutes();
     const minuteDegrees = ((minute/60)*360);
@@ -43,3 +45,10 @@ function setDate (){
 }
 
 setInterval(setDate,1000); /*active setDate function every second*/
+
+function shine(){
+    // if(document.querySelector('.digital-clock').propertyName !== "transform") return
+    // if(document.querySelector('.digital-clock').classList)
+    document.querySelector('.digital-clock').classList.remove('playing');
+}
+setInterval (shine, 1000);

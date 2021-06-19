@@ -40,7 +40,7 @@ body{
 }
 
 .hand{
-    width:50%;/*in affect it's the length of the hand, 50% of clock face*/
+    width:50%;/*in fact it's the length of the hand, 50% of clock face*/
     background:black ;
     position:absolute;
     top:50%;
@@ -64,18 +64,29 @@ body{
 
 }
 
- .minute{
-     background-color:royalblue;
-     height:6px;/*in affect it's the width of the hand*/
+.minute{
+    background-color:royalblue;
+    height:6px;/*in affect it's the width of the hand*/
+    
 
- }
+}
 
- .hour{
+.hour{
     height:8px;/*in affect it's the width of the hand*/
+}
 
- }
+.digital-clock{
+    /* border: 3px solid white; */
+    width:100%;
+    color:white;
+    font-size: 5rem;
+    margin-left: 2.5rem;
+    margin-top: 10rem;
+    text-shadow:2px 2px 3px coral;
+    transition: all 0.4s; 
+}
 
- .digital-clock{
-     color:white;
-     font-size: 3rem;
- }
+.playing {
+    text-shadow:3px 3px 5px rgb(247, 247, 6);
+    transform:scale(1.3);
+}

@@ -23,8 +23,14 @@ function setDate (){
     minuteHand.style.transform = `rotate(${minuteDegrees+90}deg)`
 
     const hour = now.getHours();
-    const hourDegrees = ((hour/24)*360);
-    hourHand.style.transform = `rotate(${hourDegrees+90}deg)`
+    if(hour<=12){
+        const hourDegrees = ((hour/12)*360)+(minute/60)*30;
+        hourHand.style.transform = `rotate(${hourDegrees+90}deg)`
+    }
+    if(hour>12){
+        const hourDegrees = (((hour-12)/12)*360)+(minute/60)*30;
+        hourHand.style.transform = `rotate(${hourDegrees+90}deg)`
+    }
 
     if(second<10){
         digitalSecond.innerHTML = `0${second}`;

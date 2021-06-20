@@ -88,6 +88,6 @@ body{
 }
 
 .playing {
-    text-shadow:3px 3px 5px rgb(247, 247, 6);
-    transform:scale(1.3);
+    text-shadow:3px 3px 5px rgb(245, 69, 6);
+    transform:scale(1.1);
 }
